@@ -1,0 +1,40 @@
+alert_zone_percent: 1.0
+archive:
+  delete_after_send: true
+  send_to_telegram: true
+crossed_alert_detection: true
+demo_mode: true
+distance:
+  max_alerts_in_summary: 10
+  show_in_summary: true
+fetch:
+  batch_size: 25
+  history_period: 2mo
+  max_workers: 4
+  min_candles_required: 5
+  sleep_between_batches: 0.5
+market_days:
+- Monday
+- Tuesday
+- Wednesday
+- Thursday
+- Friday
+- Saturday
+market_scan_time: '17:30'
+storage:
+  active_alerts_file: config/alerts.json
+  archive_folder: archive
+  history_file: data/alert_history.parquet
+summary_time: '18:00'
+telegram:
+  '1357617760': your_chat_id_here
+  8814953096:AAGtV6my8GKlD4eb3VeFJhKGkc1-UNxn4V0: your_bot_token_here
+  bot_token: 8814953096:AAGtV6my8GKlD4eb3VeFJhKGkc1-UNxn4V0
+  chat_id: '1357617760'
+telegram_enabled: true
+volume:
+  avg_period_long: 20
+  avg_period_short: 10
+  spike_strong: 3.0
+  spike_warning: 2.0
+  trendline_volume_factor: 1.5

@@ -1,0 +1,42 @@
+{
+  "CUPID": [
+    {
+      "type": "TrendlineBreakdown",
+      "point1": {
+        "date": "2026-06-04",
+        "price": 123.88
+      },
+      "point2": {
+        "date": "2026-06-24",
+        "price": 195.99
+      },
+      "volume_factor": 1.5
+    },
+    {
+      "type": "TrendlineBreakdown",
+      "point1": {
+        "date": "2026-06-04",
+        "price": 123.88
+      },
+      "point2": {
+        "date": "2026-06-24",
+        "price": 195.99
+      },
+      "volume_factor": 1.5
+    }
+  ],
+  "RELIANCE": [
+    {
+      "type": "TrendlineBreakout",
+      "point1": {
+        "date": "2026-03-01",
+        "price": 1350.0
+      },
+      "point2": {
+        "date": "2026-05-01",
+        "price": 1280.0
+      },
+      "volume_factor": 1.5
+    }
+  ]
+}

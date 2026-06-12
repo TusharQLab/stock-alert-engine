@@ -1,0 +1,42 @@
+name: Monthly Archive
+
+on:
+  schedule:
+    - cron: '0 2 1 * *'   # 1st of every month at 7:30 AM IST
+  workflow_dispatch:
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run monthly archive
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          CHAT_ID:   ${{ secrets.CHAT_ID }}
+        run: python run.py --mode archive
+
+      - name: Commit updated files
+        run: |
+          git config user.name  "alert-bot"
+          git config user.email "alert-bot@github.com"
+          git add data/alert_history.parquet
+          git diff --staged --quiet || (
+            git commit --amend --no-edit &&
+            git push --force
+          )
