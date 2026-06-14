@@ -27,10 +27,8 @@ storage:
   history_file: data/alert_history.parquet
 summary_time: '18:00'
 telegram:
-  '1357617760': your_chat_id_here
-  8814953096:AAGtV6my8GKlD4eb3VeFJhKGkc1-UNxn4V0: your_bot_token_here
-  bot_token: 8814953096:AAGtV6my8GKlD4eb3VeFJhKGkc1-UNxn4V0
-  chat_id: '1357617760'
+  bot_token: ''
+  chat_id: ''
 telegram_enabled: true
 volume:
   avg_period_long: 20

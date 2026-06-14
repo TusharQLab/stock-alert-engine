@@ -25,18 +25,14 @@
       "volume_factor": 1.5
     }
   ],
-  "RELIANCE": [
+  "HFCL": [
     {
-      "type": "TrendlineBreakout",
-      "point1": {
-        "date": "2026-03-01",
-        "price": 1350.0
-      },
-      "point2": {
-        "date": "2026-05-01",
-        "price": 1280.0
-      },
-      "volume_factor": 1.5
+      "type": "Support",
+      "level": 152.61
+    },
+    {
+      "type": "Resistance",
+      "level": 182.63
     }
   ]
 }
